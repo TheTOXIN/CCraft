@@ -1,0 +1,71 @@
+﻿  World.cpp
+  Player.cpp
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(40): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(41): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(139): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(140): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(161): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(162): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(194): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(195): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(196): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(197): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(198): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(199): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(211): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(212): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(213): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(214): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(215): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(216): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(228): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(229): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(230): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(231): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(232): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(233): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(245): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(246): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(247): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(248): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(249): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(250): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(256): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(257): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(258): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(259): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(265): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(266): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(267): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(268): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(274): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(275): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(276): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(277): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(284): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(285): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(291): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\player.cpp(292): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Object.cpp
+  Main.cpp
+  Item.cpp
+  Graphic.cpp
+e:\developer\с++\проги\ccraft\ccraft\graphic.cpp(22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\graphic.cpp(40): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\graphic.cpp(62): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\graphic.cpp(66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Game.cpp
+  Control.cpp
+  Chunck.cpp
+  Camera.cpp
+e:\developer\с++\проги\ccraft\ccraft\camera.cpp(13): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\camera.cpp(31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\camera.cpp(36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\developer\с++\проги\ccraft\ccraft\camera.cpp(63): warning C4305: 'argument': truncation from 'double' to 'float'
+e:\developer\с++\проги\ccraft\ccraft\camera.cpp(68): warning C4305: 'argument': truncation from 'double' to 'float'
+  Block.cpp
+  Audio.cpp
+  Generating Code...
+  CCraft.vcxproj -> E:\DEVELOPER\С++\ПРОГИ\CCraft\Debug\CCraft.exe
+  CCraft.vcxproj -> E:\DEVELOPER\С++\ПРОГИ\CCraft\Debug\CCraft.pdb (Full PDB)
