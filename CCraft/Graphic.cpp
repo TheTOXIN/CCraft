@@ -1,8 +1,8 @@
 #include "Graphic.h"
 
-Graphic::Graphic(World &world, Player &player, int w, int h)
+Graphic::Graphic(Chunck &chunck, Player &player, int w, int h)
 {
-	this->world = &world;
+	this->chunck = &chunck;
 	this->player = &player;
 
 	this->w = w;
@@ -13,21 +13,19 @@ Graphic::Graphic(World &world, Player &player, int w, int h)
 
 void Graphic::draw(RenderWindow &window)
 {
-	///*
-
-	for (int ci = 0; ci < world->h; ci++) 
+	for (int ci = 0; ci < chunck->h; ci++) 
 	{
-		for (int cj = 0; cj < world->w; cj++)
+		for (int cj = 0; cj < chunck->w; cj++)
 		{
 			back.setPosition(cj * w, ci * h);
 			window.draw(back);
 
-			Chunck chunck = world->chuncks[0][0];
-			for (int i = 0; i < chunck.h; i++)
+			Level level = chunck->levels[ci][cj];
+			for (int i = 0; i < level.h; i++)
 			{
-				for (int j = 0; j < chunck.w; j++)
+				for (int j = 0; j < level.w; j++)
 				{
-					int index = chunck.blocks[i][j].index;
+					int index = level.blocks[i][j].index;
 					
 					if (index != 0)
 					{
@@ -44,9 +42,9 @@ void Graphic::draw(RenderWindow &window)
 			}
 		}
 	}
-	//*/
-	RectangleShape shape(Vector2f(player->rect.width, player->rect.height));
-	shape.setPosition(player->rect.left, player->rect.top);
+	
+	//RectangleShape shape(Vector2f(player->rect.width, player->rect.height));
+	//shape.setPosition(player->rect.left, player->rect.top);
 	//window.draw(shape);
 
 	window.draw(player->head);
@@ -55,6 +53,26 @@ void Graphic::draw(RenderWindow &window)
 	window.draw(player->arm2);
 	window.draw(player->leg1);
 	window.draw(player->leg2);
+}
+
+void Graphic::renderWorld(RenderWindow & window, World & world)
+{
+}
+
+void Graphic::renderChunck(RenderWindow & window, Chunck & chunk)
+{
+}
+
+void Graphic::renderLevel(RenderWindow & window, Level & level)
+{
+}
+
+void Graphic::renderBlock(RenderWindow & window, Block & block)
+{
+}
+
+void Graphic::renderPlayer(RenderWindow & window, Player & player)
+{
 }
 
 void Graphic::load()

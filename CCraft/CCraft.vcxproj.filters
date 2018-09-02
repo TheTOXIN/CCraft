@@ -27,9 +27,6 @@
     <ClCompile Include="Block.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="World.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
     <ClCompile Include="Audio.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
@@ -45,10 +42,16 @@
     <ClCompile Include="Camera.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
     <ClCompile Include="Chunck.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="Game.cpp">
+    <ClCompile Include="World.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
   </ItemGroup>
@@ -57,9 +60,6 @@
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="World.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="Block.h">
@@ -80,10 +80,16 @@
     <ClInclude Include="Camera.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
     <ClInclude Include="Chunck.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="Game.h">
+    <ClInclude Include="World.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>

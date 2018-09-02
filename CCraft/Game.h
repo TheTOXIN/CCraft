@@ -6,17 +6,17 @@
 #include "Block.h"
 #include "Item.h"
 #include "Player.h"
-#include "World.h"
+#include "Chunck.h"
 #include "Graphic.h"
 #include "Audio.h"
 #include "Control.h"
 #include "Camera.h"
-#include "Chunck.h"
+#include "Level.h"
 
 using namespace std;
 using namespace sf;
 
-class Game//TODO refactoring
+class Game
 {
 public:
 	static const int h = 720;

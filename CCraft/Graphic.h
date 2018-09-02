@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include "Object.h"
 #include "World.h"
+#include "Chunck.h"
 #include "Player.h"
 
 using namespace std;
@@ -17,16 +18,22 @@ public:
 	int w;
 	int h;
 
-	World *world;
+	Chunck *chunck;
 	Player *player;
 
 	RectangleShape back;
 	Object textures;
 	Object logo;
 
-	Graphic(World &world, Player &player, int w, int h);
+	Graphic(Chunck &chunck, Player &player, int w, int h);
 
 	void load();
 	void draw(RenderWindow &window);
+
+	void renderWorld(RenderWindow &window, World &world);
+	void renderChunck(RenderWindow &window, Chunck &chunk);
+	void renderLevel(RenderWindow &window, Level &level);
+	void renderBlock(RenderWindow &window, Block &block);
+	void renderPlayer(RenderWindow &window, Player &player);
 };
 

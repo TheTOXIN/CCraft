@@ -6,13 +6,13 @@ Player::Player()
 	
 }
 
-Player::Player(World & world)
+Player::Player(Chunck & chunck)
 {
-	this->world = &world;
-	this->chunck = &world.chuncks[1][0];
+	this->chunck = &chunck;
+	this->level = &chunck.levels[1][0];
 
-	this->x = 600 + Game::w * chunck->x;
-	this->y = 400 + Game::h * chunck->y;
+	this->x = 600 + Game::w * level->x;
+	this->y = 400 + Game::h * level->y;
 
 	this->dx = 0;
 	this->dy = 0;
@@ -57,7 +57,7 @@ void Player::update()
 	//cout << "cx =" << Game::w << " % " << ((int)(rect.left)) << " = " << cx << endl;
 	//cout << "cy =" << Game::h << " % " << ((int)(rect.top)) << " = " << cy << endl;
 	//cout << "CHANCK:" << "x = " << cx << " " << "y = " << cy << endl;
-	chunck = &world->chuncks[((int)(rect.top)) / Game::h][((int)(rect.left)) / Game::w];
+	level = &chunck->levels[((int)(rect.top)) / Game::h][((int)(rect.left)) / Game::w];
 }
 
 void Player::move()
@@ -136,8 +136,8 @@ bool Player::checkX()
 {
 	//WARING FUCKING MAGIC
 
-	int tmpX = rect.left - Game::w * chunck->x;
-	int tmpY = rect.top - Game::h * chunck->y;
+	int tmpX = rect.left - Game::w * level->x;
+	int tmpY = rect.top - Game::h * level->y;
 
 	int i1 = (tmpY + 32) / Block::size;
 	int i2 = (tmpY + 64) / Block::size;
@@ -147,9 +147,9 @@ bool Player::checkX()
 	int j2 = (tmpX + 48) / Block::size;
 
 	
-	return (chunck->blocks[i1][j1].isSolid || chunck->blocks[i2][j1].isSolid || chunck->blocks[i3][j1].isSolid
+	return (level->blocks[i1][j1].isSolid || level->blocks[i2][j1].isSolid || level->blocks[i3][j1].isSolid
 		    ||
-		    chunck->blocks[i1][j2].isSolid || chunck->blocks[i2][j2].isSolid || chunck->blocks[i3][j2].isSolid);
+		    level->blocks[i1][j2].isSolid || level->blocks[i2][j2].isSolid || level->blocks[i3][j2].isSolid);
 		
 	return true;
 }
@@ -158,14 +158,14 @@ bool Player::checkY()
 {
 	//WARING FUCKING MAGIC
 
-	int tmpX = rect.left - Game::w * chunck->x;
-	int tmpY = rect.top - Game::h * chunck->y;
+	int tmpX = rect.left - Game::w * level->x;
+	int tmpY = rect.top - Game::h * level->y;
 
 	int i = (tmpY + 112) / Block::size;
 	int j1 = (tmpX + 16) / Block::size;
 	int j2 = (tmpX + 48) / Block::size;
 
-	return (chunck->blocks[i][j1].isSolid || (chunck->blocks[i][j2].isSolid));
+	return (level->blocks[i][j1].isSolid || (level->blocks[i][j2].isSolid));
 }
 
 void Player::init()

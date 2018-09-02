@@ -3,8 +3,8 @@
 #include "iostream"
 #include <SFML/Graphics.hpp>
 #include "Object.h"
+#include "Level.h"
 #include "Chunck.h"
-#include "World.h"
 
 using namespace std;
 using namespace sf;
@@ -38,8 +38,8 @@ public:
 	FloatRect rect;
 	Texture texture;
 
-	World *world;
 	Chunck *chunck;
+	Level *level;
 
 	Sprite head;
 	Sprite body;
@@ -49,7 +49,7 @@ public:
 	Sprite leg2;
 
 	Player();
-	Player(World &world);
+	Player(Chunck &chunck);
 
 	void jump();
 	void move();
