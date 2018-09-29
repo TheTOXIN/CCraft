@@ -16,7 +16,7 @@ void Game::start()
 	Chunck chunck;
 	Player player(chunck);
 	Camera camera(player, h, w);
-	Control control(camera, player);
+	Control control(camera, player, chunck);
 	Graphic graphic(chunck, player, w, h);
 	Clock clock;
 

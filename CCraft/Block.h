@@ -25,9 +25,12 @@ public:
 
 	bool isSolid;
 
+	static const int NONE = 0;
+
 	static const int STONE = 2;
 	static const int DIRT = 3;
 	static const int GRASS = 4;
+	static const int BOARD = 5;
 	static const int BEDROCK = 18;
 	static const int GRAV = 20;
 	static const int WOOD = 21;

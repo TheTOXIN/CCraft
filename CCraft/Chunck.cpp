@@ -1,4 +1,5 @@
 #include "Chunck.h"
+#include "Game.h"
 
 void Chunck::print()
 {
@@ -30,4 +31,43 @@ void Chunck::generate()
 		levels[i][current].x = current;
 		levels[i][current].y = i;
 	}
+}
+
+void Chunck::createBlock(int x, int y)
+{
+	Level *currentLevel = &levels[y / Game::h][x / Game::w];
+
+	int setX = (x - Game::w * currentLevel->x) / Block::size;
+	int setY = (y - Game::h * currentLevel->y) / Block::size;
+
+	if (!(setX >= 0 && setY >= 0 && setX < currentLevel->w && setY < currentLevel->h)) return;
+
+	int checksX[4] = { 1, -1, 0, 0 };
+	int checksY[4] = { 0, 0, 1, -1 };
+
+	for (int i = 0; i < 4; i++) {
+		int tmpX = setX + checksX[i];
+		int tmpY = setY + checksY[i];
+
+		if (tmpX >= 0 && setY >= 0 && tmpX < currentLevel->w && setY < currentLevel->h) {
+			if (currentLevel->blocks[tmpY][tmpX].index != Block::NONE) {
+				if (currentLevel->blocks[setY][setX].index == Block::NONE) {
+					currentLevel->blocks[setY][setX] = Block::BOARD;
+					break;
+				}
+			}
+		}
+	}
+}
+
+void Chunck::destroyBlock(int x, int y)
+{
+	Level *currentLevel = &levels[y / Game::h][x / Game::w];
+
+	int setX = (x - Game::w * currentLevel->x) / Block::size;
+	int setY = (y - Game::h * currentLevel->y) / Block::size;
+
+	if (!(setX >= 0 && setY >= 0 && setX < currentLevel->w && setY < currentLevel->h)) return;
+
+	currentLevel->blocks[setY][setX] = Block::NONE;
 }

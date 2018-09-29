@@ -4,10 +4,11 @@ Control::Control()
 {
 }
 
-Control::Control(Camera & camera, Player & player)
+Control::Control(Camera & camera, Player & player, Chunck &chunck)
 {
 	this->camera = &camera;
 	this->player = &player;
+	this->chunck = &chunck;
 }
 
 void Control::checkControl(RenderWindow & window)
@@ -19,10 +20,13 @@ void Control::checkControl(RenderWindow & window)
 			window.close();
 		if (event.type == Event::KeyReleased)
 			player->state = state::none;
+		if (event.type == Event::MouseButtonReleased)
+			this->hasClick = false;
 	}
 
 	controlPlayer(window);
 	controlCamera(window);
+	controlClick(window);
 }
 
 void Control::controlCamera(RenderWindow & window)
@@ -75,5 +79,25 @@ void Control::controlPlayer(RenderWindow &window)
 	if (Keyboard::isKeyPressed(Keyboard::Space))
 	{
 		player->state = state::jump;
+	}
+}
+
+void Control::controlClick(RenderWindow & window)
+{
+	Vector2f mouse_pos = window.mapPixelToCoords(Mouse::getPosition(window));
+
+	int x = mouse_pos.x;
+	int y = mouse_pos.y;
+
+	if (Mouse::isButtonPressed(Mouse::Left) && !hasClick)
+	{
+		chunck->createBlock(x, y);
+		this->hasClick = true;
+	}
+
+	if (Mouse::isButtonPressed(Mouse::Right) && !hasClick)
+	{
+		chunck->destroyBlock(x, y);
+		this->hasClick = true;
 	}
 }

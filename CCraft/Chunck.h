@@ -15,6 +15,9 @@ public:
 
 	Chunck();
 
+	void createBlock(int x, int y);
+	void destroyBlock(int x, int y);
+
 	void generate();
 	void print();
 };

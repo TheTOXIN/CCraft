@@ -67,9 +67,9 @@ void Level::generateLevel(int n)
 {
 	switch (n)
 	{
-	case 0: generateFirst(); break;
+	//case 0: generateFirst(); break;
 	case 1: generateSecond(); break;
-	case 2: generateThird(); break;
+	//case 2: generateThird(); break;
 	default: break;
 	}
 }
@@ -154,7 +154,7 @@ void Level::generateThird()
 	//generate layer bedrock
 	for (int i = 0; i < w; i++)
 	{
-		int len = rand() % max_len;
+		int len = rand() % max_len + 1;
 		int pos = h - len;
 
 		for (int j = pos; j < h; j++) {
