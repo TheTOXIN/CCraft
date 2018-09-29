@@ -9,7 +9,7 @@ Player::Player()
 Player::Player(Chunck & chunck)
 {
 	this->chunck = &chunck;
-	this->level = &chunck.levels[1][0];
+	this->level = &chunck.levels[1][1];
 
 	this->x = 600 + Game::w * level->x;
 	this->y = 400 + Game::h * level->y;
@@ -25,12 +25,20 @@ Player::Player(Chunck & chunck)
 
 	init();
 	move();
+	spawn();
+}
+
+void Player::spawn()
+{
+	while (checkY()) {
+		this->y--;
+		rect.top--;
+	}
 }
 
 void Player::update()
 {
-	if (!onGround) 
-		dy = 2;
+	if (!onGround) dy = 2;
 
 	move();
 
@@ -40,8 +48,7 @@ void Player::update()
 	rect.left = x - 16;
 	rect.top = y;
 
-	if (checkX())
-		x -= dx;
+	if (checkX()) x -= dx;
 
 	onGround = false;
 

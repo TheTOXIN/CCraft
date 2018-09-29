@@ -15,18 +15,19 @@ void Chunck::print()
 
 Chunck::Chunck()
 {
-	render();
+	generate();
 }
 
-void Chunck::render()
+void Chunck::generate()
 {
+	int left = 0;
+	int current = 1;
+	int right = 2;
+
 	for (int i = 0; i < h; i++)
 	{
-		for (int j = 0; j < w; j++)
-		{
-			levels[i][j].generateTest();
-			levels[i][j].x = j;
-			levels[i][j].y = i;
-		}
+		levels[i][current].generateLevel(i);
+		levels[i][current].x = current;
+		levels[i][current].y = i;
 	}
 }

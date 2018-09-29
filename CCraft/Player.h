@@ -51,6 +51,8 @@ public:
 	Player();
 	Player(Chunck &chunck);
 
+	void spawn();
+
 	void jump();
 	void move();
 	void none();

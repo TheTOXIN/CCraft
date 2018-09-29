@@ -8,8 +8,8 @@ public:
 	static const int w = 40;
 	static const int h = 22;
 
-	int x;
-	int y;
+	int x;//надо проверить это
+	int y;//координаты в пределах чанка
 
 	Block blocks[h][w];
 
@@ -17,6 +17,13 @@ public:
 
 	void generate();
 	void generateTest();
+	void generateLevel(int n);
+	void generateRes(int rare, int index, int pos);
+	void generateTree(int tx, int ty);
+
+	void generateFirst();
+	void generateSecond();
+	void generateThird();
 
 	void print();
 };

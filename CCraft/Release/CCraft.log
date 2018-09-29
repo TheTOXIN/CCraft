@@ -1,0 +1,25 @@
+﻿  Audio.cpp
+c:\users\lol-a\desktop\ccraft\ccraft\audio.h(4): fatal error C1083: Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  Block.cpp
+c:\users\lol-a\desktop\ccraft\ccraft\block.h(4): fatal error C1083: Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  Camera.cpp
+c:\users\lol-a\desktop\ccraft\ccraft\camera.h(3): fatal error C1083: Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  Level.cpp
+c:\users\lol-a\desktop\ccraft\ccraft\block.h(4): fatal error C1083: Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  Control.cpp
+c:\users\lol-a\desktop\ccraft\ccraft\control.h(4): fatal error C1083: Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  Game.cpp
+c:\users\lol-a\desktop\ccraft\ccraft\game.h(4): fatal error C1083: Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  Graphic.cpp
+c:\users\lol-a\desktop\ccraft\ccraft\graphic.h(4): fatal error C1083: Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  Item.cpp
+c:\users\lol-a\desktop\ccraft\ccraft\item.h(4): fatal error C1083: Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  Main.cpp
+c:\users\lol-a\desktop\ccraft\ccraft\game.h(4): fatal error C1083: Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  Object.cpp
+c:\users\lol-a\desktop\ccraft\ccraft\object.h(4): fatal error C1083: Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  Player.cpp
+c:\users\lol-a\desktop\ccraft\ccraft\player.h(4): fatal error C1083: Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  Chunck.cpp
+c:\users\lol-a\desktop\ccraft\ccraft\block.h(4): fatal error C1083: Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  World.cpp

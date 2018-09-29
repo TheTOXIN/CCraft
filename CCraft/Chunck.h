@@ -15,6 +15,6 @@ public:
 
 	Chunck();
 
-	void render();
+	void generate();
 	void print();
 };
