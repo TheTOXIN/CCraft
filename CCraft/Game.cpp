@@ -11,7 +11,6 @@ void Game::start()
 	icon.loadFromFile("res/icon.png");
 
 	RenderWindow window(VideoMode(w, h), "CCraft");
-	window.setFramerateLimit(60);
 	window.setIcon(32, 32, icon.getPixelsPtr());
 
 	Chunck chunck;
