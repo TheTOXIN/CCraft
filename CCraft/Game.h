@@ -19,7 +19,7 @@ using namespace sf;
 class Game
 {
 public:
-	static const int h = 720;
+	static const int h = 704;
 	static const int w = 1280;
 
 	float temp = 5000;

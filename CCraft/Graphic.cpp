@@ -35,7 +35,7 @@ void Graphic::draw(RenderWindow &window)
 							textures.sprite.setColor(Color::White);
 
 						textures.sprite.setTextureRect(IntRect(Block::size * ((index - 1) % 16), 32 * (int)((index - 1) / 16), Block::size, Block::size));
-						textures.sprite.setPosition(j * Block::size + (w * cj), i * Block::size + magic + (h * ci));
+						textures.sprite.setPosition(j * Block::size + (w * cj), i * Block::size + (h * ci));
 						window.draw(textures.sprite);
 					}
 				}

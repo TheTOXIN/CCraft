@@ -101,9 +101,10 @@ void Level::generateSecond()
 	}
 
 	int chance_tree = 10;
-	int max_len = 5;
+	int max_len_grass = 5;
+	int max_len_stone = 3;
 	int chance_flat = 1;
-	int prev_len = max_len;
+	int prev_len = max_len_grass;
 
 	//generate layer grass and trees
 	for (int i = 0; i < w; i++)
@@ -111,7 +112,7 @@ void Level::generateSecond()
 		int len = prev_len;
 
 		if (rand() % chance_flat == 0)
-			len = rand() % max_len;
+			len = rand() % max_len_grass;
 		if (rand() % chance_flat == 0)
 			len = abs(prev_len - len);
 
@@ -126,6 +127,12 @@ void Level::generateSecond()
 
 		for (int j = pos + 1; j < start_pos; j++) {
 			Block blockDirt(Block::DIRT);
+			blocks[j][i] = blockDirt;
+		}
+
+		int pos_stone = h - rand() % max_len_stone;
+		for (int j = pos_stone; j < h; j++) {
+			Block blockDirt(Block::STONE);
 			blocks[j][i] = blockDirt;
 		}
 	}
@@ -195,7 +202,7 @@ void Level::generateRes(int rare, int index, int pos)
 		int x = pos + rand() % max_spawn;
 		int y = deep + rand() % max_spawn;
 
-		if (x <= w && x >= 0 && y <= h && y >= 0) {
+		if (x <= w && x >= 0 && y <= h && y >= 0) {//Hmmm
 			Block block = Block(index);
 			blocks[y][x] = block;
 			//cout << "X=" << x << " Y=" << y << "I=" << index << endl;
@@ -227,7 +234,7 @@ void Level::generateTree(int tx, int ty)
 				int dx = j + tx - move_to_centre;
 				int dy = i + ty - tree_h + 1;
 
-				if (dx <= w && dx >= 0 && dy <= h && dy >= 0) {
+				if (dx <= w && dx >= 0 && dy <= h && dy >= 0) {//Hmmm
 					Block block = Block(TREE[i][j]);
 					blocks[dy][dx] = block;
 				}

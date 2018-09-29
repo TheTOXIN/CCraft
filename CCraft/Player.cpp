@@ -11,8 +11,8 @@ Player::Player(Chunck & chunck)
 	this->chunck = &chunck;
 	this->level = &chunck.levels[1][1];
 
-	this->x = 600 + Game::w * level->x;
-	this->y = 400 + Game::h * level->y;
+	this->x = Game::w / 2 + Game::w * level->x;
+	this->y = Game::h / 2 + Game::h * level->y;
 
 	this->dx = 0;
 	this->dy = 0;
@@ -168,7 +168,7 @@ bool Player::checkY()
 	int tmpX = rect.left - Game::w * level->x;
 	int tmpY = rect.top - Game::h * level->y;
 
-	int i = (tmpY + 112) / Block::size;
+	int i = (tmpY + 128) / Block::size;
 	int j1 = (tmpX + 16) / Block::size;
 	int j2 = (tmpX + 48) / Block::size;
 
