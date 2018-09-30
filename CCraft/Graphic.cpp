@@ -47,6 +47,10 @@ void Graphic::draw(RenderWindow &window)
 	//shape.setPosition(player->rect.left, player->rect.top);
 	//window.draw(shape);
 
+	Vector2f mouse_pos = window.mapPixelToCoords(Mouse::getPosition(window));
+	cursor.sprite.setPosition(mouse_pos.x - 16, mouse_pos.y - 16);
+	window.draw(cursor.sprite);
+
 	window.draw(player->head);
 	window.draw(player->body);
 	window.draw(player->arm1);
@@ -84,5 +88,7 @@ void Graphic::load()
 	logo.sprite.setPosition(w / 2 - logo.w / 2, 0);
 
 	textures.init("res/textures.png", 512, 512);
+
+	cursor.init("res/cursor.png", 32, 32);
 }
 

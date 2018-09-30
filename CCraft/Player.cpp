@@ -72,6 +72,7 @@ void Player::update()
 	//cout << "cy =" << Game::h << " % " << ((int)(rect.top)) << " = " << cy << endl;
 	//cout << "CHANCK:" << "x = " << cx << " " << "y = " << cy << endl;
 	//WARING FUCKING MAGIC
+	//TODO x level
 	level = &chunck->levels[((int)(rect.top) + 128) / Game::h][((int)(rect.left)) / Game::w];
 }
 

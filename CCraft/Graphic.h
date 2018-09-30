@@ -22,8 +22,10 @@ public:
 	Player *player;
 
 	RectangleShape back;
+
 	Object textures;
 	Object logo;
+	Object cursor;
 
 	Graphic(Chunck &chunck, Player &player, int w, int h);
 

@@ -12,6 +12,7 @@ void Game::start()
 
 	RenderWindow window(VideoMode(w, h), "CCraft");
 	window.setIcon(32, 32, icon.getPixelsPtr());
+	window.setMouseCursorVisible(false);
 
 	Chunck chunck;
 	Player player(chunck);
