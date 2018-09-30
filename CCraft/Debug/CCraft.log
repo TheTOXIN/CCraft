@@ -14,22 +14,22 @@ c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(49): warning C4244: =: прео�
           [
               T=float
           ]
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(146): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
-          with
-          [
-              T=float
-          ]
 c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(147): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
           with
           [
               T=float
           ]
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(168): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(148): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
           with
           [
               T=float
           ]
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(169): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(166): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(167): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
           with
           [
               T=float

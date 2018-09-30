@@ -64,7 +64,8 @@ void Player::update()
 	//cout << "cx =" << Game::w << " % " << ((int)(rect.left)) << " = " << cx << endl;
 	//cout << "cy =" << Game::h << " % " << ((int)(rect.top)) << " = " << cy << endl;
 	//cout << "CHANCK:" << "x = " << cx << " " << "y = " << cy << endl;
-	level = &chunck->levels[((int)(rect.top)) / Game::h][((int)(rect.left)) / Game::w];
+	//WARING FUCKING MAGIC
+	level = &chunck->levels[((int)(rect.top) + 128) / Game::h][((int)(rect.left)) / Game::w];
 }
 
 void Player::move()
@@ -152,13 +153,10 @@ bool Player::checkX()
 
 	int j1 = (tmpX + 16) / Block::size;
 	int j2 = (tmpX + 48) / Block::size;
-
 	
-	return (level->blocks[i1][j1].isSolid || level->blocks[i2][j1].isSolid || level->blocks[i3][j1].isSolid
+	return level->blocks[i1][j1].isSolid || level->blocks[i2][j1].isSolid || level->blocks[i3][j1].isSolid
 		    ||
-		    level->blocks[i1][j2].isSolid || level->blocks[i2][j2].isSolid || level->blocks[i3][j2].isSolid);
-		
-	return true;
+		    level->blocks[i1][j2].isSolid || level->blocks[i2][j2].isSolid || level->blocks[i3][j2].isSolid;
 }
 
 bool Player::checkY()
@@ -172,7 +170,7 @@ bool Player::checkY()
 	int j1 = (tmpX + 16) / Block::size;
 	int j2 = (tmpX + 48) / Block::size;
 
-	return (level->blocks[i][j1].isSolid || (level->blocks[i][j2].isSolid));
+	return level->blocks[i][j1].isSolid || level->blocks[i][j2].isSolid;
 }
 
 void Player::init()
