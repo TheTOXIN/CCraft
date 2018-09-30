@@ -18,6 +18,7 @@ Player::Player(Chunck & chunck)
 	this->dy = 0;
 	this->r = 0;
 	this->j = 0;
+	this->r_area = 4;
 
 	onGround = false;
 	rect = FloatRect(x - 16, y, 64, 128);
@@ -26,6 +27,12 @@ Player::Player(Chunck & chunck)
 	init();
 	move();
 	spawn();
+}
+
+bool Player::validClick(int cx, int cy)
+{
+	int s = sqrt(pow(cx - (this->x + 16), 2) + pow(cy - (this->y + 64), 2));
+	return s <= this->r_area * Block::size;
 }
 
 void Player::spawn()

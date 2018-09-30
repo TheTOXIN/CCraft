@@ -29,6 +29,8 @@ public:
 	int r;
 	int d;
 	int j;
+	
+	int r_area;
 
 	bool inSpace;
 	bool onGround;
@@ -51,6 +53,7 @@ public:
 	Player();
 	Player(Chunck &chunck);
 
+	bool validClick(int cx, int cy);
 	void spawn();
 
 	void jump();

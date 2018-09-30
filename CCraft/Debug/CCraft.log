@@ -1,77 +1,78 @@
 ﻿  Player.cpp
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(23): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(24): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
           with
           [
               T=float
           ]
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(48): warning C4244: =: преобразование "int" в "T", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(34): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(55): warning C4244: =: преобразование "int" в "T", возможна потеря данных
           with
           [
               T=float
           ]
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(49): warning C4244: =: преобразование "int" в "T", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(56): warning C4244: =: преобразование "int" в "T", возможна потеря данных
           with
           [
               T=float
           ]
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(147): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(154): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
           with
           [
               T=float
           ]
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(148): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(155): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
           with
           [
               T=float
           ]
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(166): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(173): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
           with
           [
               T=float
           ]
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(167): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(174): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
           with
           [
               T=float
           ]
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(201): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(202): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(203): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(204): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(205): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
 c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(206): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(218): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(219): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(220): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(221): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(222): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(207): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(208): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(209): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(210): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(211): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
 c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(223): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(235): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(236): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(237): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(238): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(239): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(224): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(225): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(226): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(227): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(228): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
 c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(240): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(252): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(253): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(254): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(255): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(256): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(241): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(242): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(243): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(244): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(245): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
 c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(257): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(263): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(264): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(265): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(266): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(272): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(273): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(274): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(275): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(281): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(282): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(283): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(284): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(291): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(292): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(298): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(299): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(258): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(259): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(260): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(261): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(262): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(268): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(269): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(270): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(271): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(277): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(278): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(279): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(280): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(286): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(287): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(288): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(289): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(296): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(297): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(303): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\lol-a\desktop\ccraft\ccraft\player.cpp(304): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
   CCraft.vcxproj -> C:\Users\lol-a\Desktop\CCraft\Debug\CCraft.exe

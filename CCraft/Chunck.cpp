@@ -83,5 +83,17 @@ void Chunck::destroyBlock(int x, int y)
 
 	if (!(setX >= 0 && setY >= 0 && setX < currentLevel->w && setY < currentLevel->h)) return;
 
-	currentLevel->blocks[setY][setX] = Block::NONE;
+	int checksX[4] = { 1, -1, 0, 0 };
+	int checksY[4] = { 0, 0, 1, -1 };
+
+	for (int i = 0; i < 4; i++) {
+		int tmpX = setX + checksX[i];
+		int tmpY = setY + checksY[i];
+
+		if (currentLevel->blocks[tmpY][tmpX].index == Block::NONE || 
+			(tmpY < 0 || tmpY >= currentLevel->h || tmpX < 0 || tmpX >= currentLevel->w)) {
+			currentLevel->blocks[setY][setX] = Block::NONE;
+			break;
+		}
+	}
 }

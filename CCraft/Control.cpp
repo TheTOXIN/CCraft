@@ -1,4 +1,5 @@
 #include "Control.h"
+#include "Math.h"
 
 Control::Control()
 {
@@ -24,9 +25,9 @@ void Control::checkControl(RenderWindow & window)
 			this->hasClick = false;
 	}
 
-	controlPlayer(window);
+	controlKeyboardPlayer(window);
+	controlClickPlayer(window);
 	controlCamera(window);
-	controlClick(window);
 }
 
 void Control::controlCamera(RenderWindow & window)
@@ -57,7 +58,7 @@ void Control::controlCamera(RenderWindow & window)
 		this->camera->reset();
 }
 
-void Control::controlPlayer(RenderWindow &window)
+void Control::controlKeyboardPlayer(RenderWindow &window)
 {
 	if (Keyboard::isKeyPressed(Keyboard::W))
 	{
@@ -82,7 +83,7 @@ void Control::controlPlayer(RenderWindow &window)
 	}
 }
 
-void Control::controlClick(RenderWindow & window)
+void Control::controlClickPlayer(RenderWindow & window)
 {
 	Vector2f mouse_pos = window.mapPixelToCoords(Mouse::getPosition(window));
 
@@ -91,12 +92,14 @@ void Control::controlClick(RenderWindow & window)
 
 	if (Mouse::isButtonPressed(Mouse::Left) && !hasClick)
 	{
+		if (!player->validClick(x, y)) return;
 		chunck->createBlock(x, y);
 		this->hasClick = true;
 	}
 
 	if (Mouse::isButtonPressed(Mouse::Right) && !hasClick)
 	{
+		if (!player->validClick(x, y)) return;
 		chunck->destroyBlock(x, y);
 		this->hasClick = true;
 	}

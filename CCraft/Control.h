@@ -23,7 +23,7 @@ public:
 
 	void checkControl(RenderWindow &window);
 	void controlCamera(RenderWindow &window);
-	void controlPlayer(RenderWindow &window);
-	void controlClick(RenderWindow &window);
+	void controlKeyboardPlayer(RenderWindow &window);
+	void controlClickPlayer(RenderWindow &window);
 };
 
