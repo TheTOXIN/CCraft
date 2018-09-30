@@ -67,9 +67,9 @@ void Level::generateLevel(int n)
 {
 	switch (n)
 	{
-	//case 0: generateFirst(); break;
+	case 0: generateFirst(); break;
 	case 1: generateSecond(); break;
-	//case 2: generateThird(); break;
+	case 2: generateThird(); break;
 	default: break;
 	}
 }

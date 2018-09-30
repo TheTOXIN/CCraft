@@ -31,6 +31,20 @@ void Chunck::generate()
 		levels[i][current].x = current;
 		levels[i][current].y = i;
 	}
+
+	for (int i = 0; i < h; i++)
+	{
+		levels[i][left].generateLevel(i);
+		levels[i][left].x = left;
+		levels[i][left].y = i;
+	}
+
+	for (int i = 0; i < h; i++)
+	{
+		levels[i][right].generateLevel(i);
+		levels[i][right].x = right;
+		levels[i][right].y = i;
+	}
 }
 
 void Chunck::createBlock(int x, int y)
