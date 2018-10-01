@@ -11,6 +11,8 @@ public:
 	static const int w = 3;
 	static const int h = 3;
 
+	int count_chunck;
+
 	Level levels[w][h];
 
 	Chunck();
@@ -18,6 +20,6 @@ public:
 	void createBlock(int x, int y);
 	void destroyBlock(int x, int y);
 
-	void generate();
+	void generate(int n, int i);
 	void print();
 };

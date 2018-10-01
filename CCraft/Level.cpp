@@ -3,23 +3,16 @@
 
 Level::Level()
 {
-	for (int i = 0; i < h; i++)
-	{
-		for (int j = 0; j < w; j++)
-		{
-			Block block(0);
-			blocks[i][j] = block;
-		}
-	}
+	this->generateClear();
 }
 
-void Level::generate()
+void Level::generateClear()
 {
 	for (int i = 0; i < h; i++)
 	{
 		for (int j = 0; j < w; j++)
 		{
-			Block block(208);
+			Block block(0);
 			blocks[i][j] = block;
 		}
 	}
@@ -100,12 +93,13 @@ void Level::generateSecond()
 		}
 	}
 
-	int chance_tree = 10;
+	int chance_tree = 20;//move to config
 	int max_len_grass = 5;
 	int max_len_stone = 3;
 	int chance_flat = 1;
 	int prev_len = max_len_grass;
 
+	///*
 	//generate layer grass and trees
 	for (int i = 0; i < w; i++)
 	{
@@ -136,6 +130,7 @@ void Level::generateSecond()
 			blocks[j][i] = blockDirt;
 		}
 	}
+	//*/
 }
 
 void Level::generateThird()
@@ -250,7 +245,7 @@ void Level::print()
 		for (int j = 0; j < w; j++)
 		{
 			int index = blocks[i][j].index;
-			cout << index << " ";
+			cout << index << " " << cout.width(3);
 		}
 		cout << endl;
 	}

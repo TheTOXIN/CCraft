@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "World.h"
 
 Game::Game()
 {
@@ -16,9 +17,10 @@ void Game::start()
 
 	Chunck chunck;
 	Player player(chunck);
+	World world(player, chunck);
 	Camera camera(player, h, w);
-	Control control(camera, player, chunck);
-	Graphic graphic(chunck, player, w, h);
+	Control control(camera, player, chunck, world);
+	Graphic graphic(chunck, player, w, h);//only world
 	Clock clock;
 
 	while (window.isOpen())
@@ -30,7 +32,8 @@ void Game::start()
 		{
 			control.checkControl(window);
 
-			player.update();
+			//player.update();
+			world.update();
 			camera.update();
 
 			tick = 0;

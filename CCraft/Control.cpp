@@ -5,11 +5,12 @@ Control::Control()
 {
 }
 
-Control::Control(Camera & camera, Player & player, Chunck &chunck)
+Control::Control(Camera & camera, Player & player, Chunck &chunck, World &world)
 {
 	this->camera = &camera;
 	this->player = &player;
 	this->chunck = &chunck;
+	this->world = &world;
 }
 
 void Control::checkControl(RenderWindow & window)
@@ -19,8 +20,10 @@ void Control::checkControl(RenderWindow & window)
 	{
 		if (event.type == Event::Closed)
 			window.close();
-		if (event.type == Event::KeyReleased)
+		if (event.type == Event::KeyReleased) {
 			player->state = state::none;
+			this->hasGenerate = false;
+		}
 		if (event.type == Event::MouseButtonReleased)
 			this->hasClick = false;
 	}
@@ -28,6 +31,7 @@ void Control::checkControl(RenderWindow & window)
 	controlKeyboardPlayer(window);
 	controlClickPlayer(window);
 	controlCamera(window);
+	controlWorld(window);
 }
 
 void Control::controlCamera(RenderWindow & window)
@@ -56,6 +60,19 @@ void Control::controlCamera(RenderWindow & window)
 
 	if (Keyboard::isKeyPressed(Keyboard::RAlt))
 		this->camera->reset();
+}
+
+void Control::controlWorld(RenderWindow & window)
+{
+	if (Keyboard::isKeyPressed(Keyboard::Q) && !hasGenerate) {
+		world->updatePrev();
+		this->hasGenerate = true;
+	}
+
+	if (Keyboard::isKeyPressed(Keyboard::E) && !hasGenerate) {
+		world->updateNext();
+		this->hasGenerate = true;
+	}
 }
 
 void Control::controlKeyboardPlayer(RenderWindow &window)
@@ -90,14 +107,14 @@ void Control::controlClickPlayer(RenderWindow & window)
 	int x = mouse_pos.x;
 	int y = mouse_pos.y;
 
-	if (Mouse::isButtonPressed(Mouse::Left) && !hasClick)
+	if (Mouse::isButtonPressed(Mouse::Right) && !hasClick)
 	{
 		if (!player->validClick(x, y)) return;
 		chunck->createBlock(x, y);
 		this->hasClick = true;
 	}
 
-	if (Mouse::isButtonPressed(Mouse::Right) && !hasClick)
+	if (Mouse::isButtonPressed(Mouse::Left) && !hasClick)
 	{
 		if (!player->validClick(x, y)) return;
 		chunck->destroyBlock(x, y);

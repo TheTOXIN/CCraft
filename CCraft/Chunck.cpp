@@ -7,44 +7,33 @@ void Chunck::print()
 	{
 		for (int cj = 0; cj < w; cj++)
 		{
-			Level chunck = levels[ci][cj];
-			cout << "CHUNCK = " << chunck.x << ":" << chunck.y << endl;
-			chunck.print();
+			Level level = levels[ci][cj];
+			cout << "LEVEL = " << level.x << ":" << level.y << endl;
+			level.print();
 		}
 	}
 }
 
 Chunck::Chunck()
 {
-	generate();
+	this->count_chunck = 0;
+
+	generate(World::left, count_chunck - 1);
+	generate(World::currnet, count_chunck);
+	generate(World::right, count_chunck + 1);
 }
 
-void Chunck::generate()
+void Chunck::generate(int number, int index)
 {
-	int left = 0;
-	int current = 1;
-	int right = 2;
-
 	for (int i = 0; i < h; i++)
 	{
-		levels[i][current].generateLevel(i);
-		levels[i][current].x = current;
-		levels[i][current].y = i;
+		levels[i][number].generateLevel(i);
+		levels[i][number].x = number;
+		levels[i][number].y = i;
+		levels[i][number].index = index;
 	}
 
-	for (int i = 0; i < h; i++)
-	{
-		levels[i][left].generateLevel(i);
-		levels[i][left].x = left;
-		levels[i][left].y = i;
-	}
-
-	for (int i = 0; i < h; i++)
-	{
-		levels[i][right].generateLevel(i);
-		levels[i][right].x = right;
-		levels[i][right].y = i;
-	}
+	this->count_chunck++;
 }
 
 void Chunck::createBlock(int x, int y)

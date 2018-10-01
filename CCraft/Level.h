@@ -15,7 +15,10 @@ public:
 
 	Level();
 
-	void generate();
+	int index;
+
+	void generateClear();
+
 	void generateTest();
 	void generateLevel(int n);
 	void generateRes(int rare, int index, int pos);
