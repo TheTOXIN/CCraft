@@ -11,7 +11,7 @@ public:
 	static const int w = 3;
 	static const int h = 3;
 
-	int count_chunck;
+	int count_lvl;
 
 	Level levels[w][h];
 
@@ -20,6 +20,7 @@ public:
 	void createBlock(int x, int y);
 	void destroyBlock(int x, int y);
 
-	void generate(int n, int i);
+	void init();
+	void generate(int n, int i, int l);
 	void print();
 };

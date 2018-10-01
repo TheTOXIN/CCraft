@@ -1,5 +1,4 @@
-﻿  Main.cpp
-c:\users\lol-a\desktop\ccraft\ccraft\main.cpp(9): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+﻿  Chunck.cpp
   World.cpp
   Создание кода...
-  CCraft.vcxproj -> C:\Users\lol-a\Desktop\CCraft\Debug\CCraft.exe
+  CCraft.vcxproj -> D:\DEVELOPER\С++\CCraft\Debug\CCraft.exe
