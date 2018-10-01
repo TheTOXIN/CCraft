@@ -17,7 +17,20 @@ void World::init()
 
 void World::update()
 {
-	
+	int x = player->level->x;
+	int y = player->level->y;
+
+	if (player->level->x == World::left) {
+		updateNext();
+		player->x = player->x + Level::w * Block::size;
+		player->rect.left = player->rect.left + Level::w * Block::size;
+	} 
+
+	if (player->level->x == World::right) {
+		updatePrev();
+		player->x = player->x - Level::w * Block::size;
+		player->rect.left = player->rect.left - Level::w * Block::size;
+	}
 }
 
 void World::updatePrev()

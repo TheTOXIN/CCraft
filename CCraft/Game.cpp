@@ -32,7 +32,7 @@ void Game::start()
 		{
 			control.checkControl(window);
 
-			//player.update();
+			player.update();
 			world.update();
 			camera.update();
 

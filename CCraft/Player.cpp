@@ -24,9 +24,9 @@ Player::Player(Chunck & chunck)
 	rect = FloatRect(x - 16, y, 64, 128);
 	state = state::none;
 
-	//init();
-	//move();
-	//spawn();
+	init();
+	move();
+	spawn();
 }
 
 bool Player::validClick(int cx, int cy)
