@@ -24,9 +24,9 @@ Player::Player(Chunck & chunck)
 	rect = FloatRect(x - 16, y, 64, 128);
 	state = state::none;
 
-	//init();
-	//move();
-	//spawn();
+	init();
+	move();
+	spawn();
 }
 
 bool Player::validClick(int cx, int cy)
@@ -323,4 +323,16 @@ void Player::default()
 	arm2.setRotation(0);
 	leg1.setRotation(0);
 	leg2.setRotation(0);
+}
+
+void Player::moveNext()
+{
+	this->x = this->x + Level::w * Block::size;
+	this->rect.left = this->rect.left + Level::w * Block::size;
+}
+
+void Player::movePrev()
+{
+	this->x = this->x - Level::w * Block::size;
+	this->rect.left = this->rect.left - Level::w * Block::size;
 }

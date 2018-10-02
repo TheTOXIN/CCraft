@@ -79,6 +79,9 @@ public:
 	void animate();
 	void default();
 
+	void moveNext();
+	void movePrev();
+
 	bool checkX();
 	bool checkY();
 };

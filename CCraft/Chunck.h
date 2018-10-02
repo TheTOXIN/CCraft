@@ -2,6 +2,7 @@
 
 #include "iostream"
 #include "Level.h"
+#include "Memory.h"
 
 using namespace std;
 
@@ -11,15 +12,19 @@ public:
 	static const int w = 3;
 	static const int h = 3;
 
-	int count_chunck;
+	Chunck(Memory &memory);
+
+	int count_lvl;
 
 	Level levels[w][h];
 
-	Chunck();
+	Memory *memory;
 
 	void createBlock(int x, int y);
 	void destroyBlock(int x, int y);
 
-	void generate(int n, int i);
+	Level* generate(int n, int i, int l);
+
+	void init();
 	void print();
 };

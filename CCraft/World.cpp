@@ -4,10 +4,11 @@ World::World()
 {
 }
 
-World::World(Player & player, Chunck & chunck)
+World::World(Player & player, Chunck & chunck, Memory & memory)
 {
 	this->chunck = &chunck;
 	this->player = &player;
+	this->memory = &memory;
 }
 
 void World::init()
@@ -17,7 +18,18 @@ void World::init()
 
 void World::update()
 {
-	
+	int x = player->level->x;
+	int y = player->level->y;
+
+	if (player->level->x == World::left) {
+		updateNext();
+		player->moveNext();
+	} 
+
+	if (player->level->x == World::right) {
+		updatePrev();
+		player->movePrev();
+	}
 }
 
 void World::updatePrev()
@@ -30,20 +42,14 @@ void World::updatePrev()
 		chunck->levels[i][World::currnet].x = World::currnet;
 
 		chunck->levels[i][World::right].generateClear();
-	}
+	
+		int index = chunck->levels[i][World::currnet].index + Chunck::h;
 
-	int index = chunck->levels[1][World::currnet].index + 1;
-
-	if (memory.find(index) == memory.end()) 
-	{
-		cout << "NOT FOUND" << endl;
+		if (memory->hasLvl(index))
+			chunck->levels[i][World::right] = memory->getLvl(index);
+		else
+			memory->addLvl(chunck->generate(World::right, index, i), index);
 	}
-	else
-	{
-		cout << "FOUND" << endl;
-	}
-
-	chunck->generate(World::right, index);
 }
 
 void World::updateNext()
@@ -56,18 +62,12 @@ void World::updateNext()
 		chunck->levels[i][World::currnet].x = World::currnet;
 
 		chunck->levels[i][World::left].generateClear();
-	}
 
-	int index = chunck->levels[1][World::currnet].index - 1;
+		int index = chunck->levels[i][World::currnet].index - Chunck::h;
 
-	if (memory.find(index) == memory.end())
-	{
-		cout << "NOT FOUND" << endl;
+		if (memory->hasLvl(index))
+			chunck->levels[i][World::left] = memory->getLvl(index);
+		else
+			memory->addLvl(chunck->generate(World::left, index, i), index);
 	}
-	else
-	{
-		cout << "FOUND" << endl;
-	}
-
-	chunck->generate(World::left, index);
 }

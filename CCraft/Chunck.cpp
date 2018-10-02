@@ -1,6 +1,9 @@
 #include "Chunck.h"
 #include "Game.h"
 
+int checksX[4] = { 1, -1, 0, 0 };
+int checksY[4] = { 0, 0, 1, -1 };
+
 void Chunck::print()
 {
 	for (int ci = 0; ci < h; ci++)
@@ -8,32 +11,42 @@ void Chunck::print()
 		for (int cj = 0; cj < w; cj++)
 		{
 			Level level = levels[ci][cj];
-			cout << "LEVEL = " << level.x << ":" << level.y << endl;
-			level.print();
+			cout << " " << level.x << ":" << level.y << "| i = " << level.index;
+			//level.print();
 		}
+		cout << endl;
 	}
+	cout << "____________" << endl;
 }
 
-Chunck::Chunck()
+Chunck::Chunck(Memory &memory)
 {
-	this->count_chunck = 0;
+	this->count_lvl = 0;
+	this->memory = &memory;
 
-	generate(World::left, count_chunck - 1);
-	generate(World::currnet, count_chunck);
-	generate(World::right, count_chunck + 1);
+	init();
 }
 
-void Chunck::generate(int number, int index)
+void Chunck::init()
 {
 	for (int i = 0; i < h; i++)
 	{
-		levels[i][number].generateLevel(i);
-		levels[i][number].x = number;
-		levels[i][number].y = i;
-		levels[i][number].index = index;
+		memory->addLvl(generate(World::left, -h + i, i), -h + i);
+		memory->addLvl(generate(World::currnet, 0 + i, i), 0 + i);
+		memory->addLvl(generate(World::right, h + i, i), h + i);
 	}
+}
 
-	this->count_chunck++;
+Level* Chunck::generate(int number, int index, int lvl)
+{
+	levels[lvl][number].generateLevel(lvl);
+	levels[lvl][number].x = number;
+	levels[lvl][number].y = lvl;
+	levels[lvl][number].index = index;
+	
+	this->count_lvl++;
+
+	return &levels[lvl][number];
 }
 
 void Chunck::createBlock(int x, int y)
@@ -44,9 +57,6 @@ void Chunck::createBlock(int x, int y)
 	int setY = (y - Game::h * currentLevel->y) / Block::size;
 
 	if (!(setX >= 0 && setY >= 0 && setX < currentLevel->w && setY < currentLevel->h)) return;
-
-	int checksX[4] = { 1, -1, 0, 0 };
-	int checksY[4] = { 0, 0, 1, -1 };
 
 	for (int i = 0; i < 4; i++) {
 		int tmpX = setX + checksX[i];
@@ -61,6 +71,8 @@ void Chunck::createBlock(int x, int y)
 			}
 		}
 	}
+
+	memory->updateLvl(currentLevel);
 }
 
 void Chunck::destroyBlock(int x, int y)
@@ -72,9 +84,6 @@ void Chunck::destroyBlock(int x, int y)
 
 	if (!(setX >= 0 && setY >= 0 && setX < currentLevel->w && setY < currentLevel->h)) return;
 
-	int checksX[4] = { 1, -1, 0, 0 };
-	int checksY[4] = { 0, 0, 1, -1 };
-
 	for (int i = 0; i < 4; i++) {
 		int tmpX = setX + checksX[i];
 		int tmpY = setY + checksY[i];
@@ -85,4 +94,6 @@ void Chunck::destroyBlock(int x, int y)
 			break;
 		}
 	}
+
+	memory->updateLvl(currentLevel);
 }

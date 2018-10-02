@@ -161,6 +161,7 @@
     <ClCompile Include="Graphic.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Memory.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Chunck.cpp" />
@@ -175,6 +176,7 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="Graphic.h" />
     <ClInclude Include="Item.h" />
+    <ClInclude Include="Memory.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Chunck.h" />

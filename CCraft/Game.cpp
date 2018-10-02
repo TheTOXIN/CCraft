@@ -15,9 +15,10 @@ void Game::start()
 	window.setIcon(32, 32, icon.getPixelsPtr());
 	window.setMouseCursorVisible(false);
 
-	Chunck chunck;
+	Memory memory;
+	Chunck chunck(memory);
 	Player player(chunck);
-	World world(player, chunck);
+	World world(player, chunck, memory);
 	Camera camera(player, h, w);
 	Control control(camera, player, chunck, world);
 	Graphic graphic(chunck, player, w, h);//only world
@@ -32,7 +33,7 @@ void Game::start()
 		{
 			control.checkControl(window);
 
-			//player.update();
+			player.update();
 			world.update();
 			camera.update();
 
