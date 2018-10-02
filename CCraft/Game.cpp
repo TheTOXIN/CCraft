@@ -19,7 +19,7 @@ void Game::start()
 	Chunck chunck(memory);
 	Player player(chunck);
 	World world(player, chunck, memory);
-	Camera camera(player, h, w);
+	Camera camera(player, h / 2, w / 2);
 	Control control(camera, player, chunck, world);
 	Graphic graphic(chunck, player, w, h);//only world
 	Clock clock;
@@ -41,7 +41,7 @@ void Game::start()
 		}
 
 		window.setView(camera.getView());
-		window.clear();
+ 		window.clear();
 		graphic.draw(window);
 		window.display();
 	}

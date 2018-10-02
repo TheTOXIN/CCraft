@@ -24,9 +24,7 @@ void World::update()
 	if (player->level->x == World::left) {
 		updateNext();
 		player->moveNext();
-	} 
-
-	if (player->level->x == World::right) {
+	} else if (player->level->x == World::right) {
 		updatePrev();
 		player->movePrev();
 	}

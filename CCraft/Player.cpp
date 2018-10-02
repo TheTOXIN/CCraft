@@ -21,7 +21,7 @@ Player::Player(Chunck & chunck)
 	this->r_area = 4;
 
 	onGround = false;
-	rect = FloatRect(x - 16, y, 64, 128);
+	rect = FloatRect(x - 8, y, 32, 64);
 	state = state::none;
 
 	init();
@@ -31,7 +31,7 @@ Player::Player(Chunck & chunck)
 
 bool Player::validClick(int cx, int cy)
 {
-	int s = sqrt(pow(cx - (this->x + 16), 2) + pow(cy - (this->y + 64), 2));
+	int s = sqrt(pow(cx - (this->x + 8), 2) + pow(cy - (this->y + 32), 2));
 	return s <= this->r_area * Block::size;
 }
 
@@ -52,7 +52,7 @@ void Player::update()
 	y += dy;
 	x += dx;
 	
-	rect.left = x - 16;
+	rect.left = x - 8;
 	rect.top = y;
 
 	if (checkX()) x -= dx;
@@ -73,7 +73,7 @@ void Player::update()
 	//cout << "CHANCK:" << "x = " << cx << " " << "y = " << cy << endl;
 	//WARING FUCKING MAGIC
 	//TODO x level
-	level = &chunck->levels[((int)(rect.top) + 128) / Game::h][((int)(rect.left)) / Game::w];
+	level = &chunck->levels[((int)(rect.top) + 64) / Game::h][((int)(rect.left) + 32) / Game::w];
 }
 
 void Player::move()
@@ -113,7 +113,7 @@ void Player::jump()
 	animateJump();
 
 	j++;
-	if (j < 32)
+	if (j < 24)
 		dy = -3;
 	else
 		return;
@@ -155,12 +155,12 @@ bool Player::checkX()
 	int tmpX = rect.left - Game::w * level->x;
 	int tmpY = rect.top - Game::h * level->y;
 
-	int i1 = (tmpY + 32) / Block::size;
-	int i2 = (tmpY + 64) / Block::size;
-	int i3 = (tmpY + 96) / Block::size;
+	int i1 = (tmpY + 16) / Block::size;
+	int i2 = (tmpY + 32) / Block::size;
+	int i3 = (tmpY + 48) / Block::size;
 
-	int j1 = (tmpX + 16) / Block::size;
-	int j2 = (tmpX + 48) / Block::size;
+	int j1 = (tmpX + 8) / Block::size;
+	int j2 = (tmpX + 24) / Block::size;
 	
 	return level->blocks[i1][j1].isSolid || level->blocks[i2][j1].isSolid || level->blocks[i3][j1].isSolid
 		    ||
@@ -174,16 +174,16 @@ bool Player::checkY()
 	int tmpX = rect.left - Game::w * level->x;
 	int tmpY = rect.top - Game::h * level->y;
 
-	int i = (tmpY + 128) / Block::size;
-	int j1 = (tmpX + 16) / Block::size;
-	int j2 = (tmpX + 48) / Block::size;
+	int i = (tmpY + 64) / Block::size;
+	int j1 = (tmpX + 8) / Block::size;
+	int j2 = (tmpX + 24) / Block::size;
 
 	return level->blocks[i][j1].isSolid || level->blocks[i][j2].isSolid;
 }
 
 void Player::init()
 {
-	texture.loadFromFile("res/steve.png");
+	texture.loadFromFile("res/steve_2.png");
 	head.setTexture(texture);
 
 	body.setTexture(texture);
@@ -197,70 +197,70 @@ void Player::renderFront()
 {
 	default();
 
-	head.setTextureRect(IntRect(32, 32, 32, 32));
-	body.setTextureRect(IntRect(80, 80, 32, 48));
-	arm1.setTextureRect(IntRect(176, 80, 16, 48));
-	arm2.setTextureRect(IntRect(208, 80, 16, 48));
-	leg1.setTextureRect(IntRect(16, 80, 16, 48));
-	leg2.setTextureRect(IntRect(48, 80, 16, 48));
+	head.setTextureRect(IntRect(32/2, 32 / 2, 32 / 2, 32 / 2));
+	body.setTextureRect(IntRect(80 / 2, 80 / 2, 32 / 2, 48 / 2));
+	arm1.setTextureRect(IntRect(176 / 2, 80 / 2, 16 / 2, 48 / 2));
+	arm2.setTextureRect(IntRect(208 / 2, 80 / 2, 16 / 2, 48 / 2));
+	leg1.setTextureRect(IntRect(16 / 2, 80 / 2, 16 / 2, 48 / 2));
+	leg2.setTextureRect(IntRect(48 / 2, 80 / 2, 16 / 2, 48 / 2));
 
 	head.setPosition(x, y);
-	body.setPosition(x, y + 32);
-	arm1.setPosition(x, y + 32);
-	arm2.setPosition(x + 32, y + 32);
-	leg1.setPosition(x + 16, y + 32 + 48);
-	leg2.setPosition(x + 16, y + 32 + 48);
+	body.setPosition(x, y + 32 / 2);
+	arm1.setPosition(x, y + 32 / 2);
+	arm2.setPosition(x + 32 / 2, y + 32 / 2);
+	leg1.setPosition(x + 16 / 2, y + 32 / 2 + 48 / 2);
+	leg2.setPosition(x + 16 / 2, y + 32 / 2 + 48 / 2);
 }
 
 void Player::renderLeft()
 {
-	head.setTextureRect(IntRect(64, 32, 32, 32));
-	body.setTextureRect(IntRect(112, 80, 16, 48));
-	arm2.setTextureRect(IntRect(160, 80, 16, 48));
-	arm1.setTextureRect(IntRect(192, 80, 16, 48));
-	leg2.setTextureRect(IntRect(0, 80, 16, 48));
-	leg1.setTextureRect(IntRect(32, 80, 16, 48));
+	head.setTextureRect(IntRect(64 / 2, 32 / 2, 32 / 2, 32 / 2));
+	body.setTextureRect(IntRect(112 / 2, 80 / 2, 16 / 2, 48 / 2));
+	arm2.setTextureRect(IntRect(160 / 2, 80 / 2, 16 / 2, 48 / 2));
+	arm1.setTextureRect(IntRect(192 / 2, 80 / 2, 16 / 2, 48 / 2));
+	leg2.setTextureRect(IntRect(0 / 2, 80 / 2, 16 / 2, 48 / 2));
+	leg1.setTextureRect(IntRect(32 / 2, 80 / 2, 16 / 2, 48 / 2));
 
 	head.setPosition(x, y);
-	body.setPosition(x + 8, y + 32);
-	arm1.setPosition(x + 24, y + 32);
-	arm2.setPosition(x + 8, y + 32);
-	leg1.setPosition(x + 24, y + 32 + 48);
-	leg2.setPosition(x + 8, y + 32 + 48);
+	body.setPosition(x + 8 / 2, y + 32 / 2);
+	arm1.setPosition(x + 24 / 2, y + 32 / 2);
+	arm2.setPosition(x + 8 / 2, y + 32 / 2);
+	leg1.setPosition(x + 24 / 2, y + 32 / 2 + 48 / 2);
+	leg2.setPosition(x + 8 / 2, y + 32 / 2 + 48 / 2);
 }
 
 void Player::renderRight()
 {
-	head.setTextureRect(IntRect(0, 32, 32, 32));
-	body.setTextureRect(IntRect(64, 80, 16, 48));
-	arm1.setTextureRect(IntRect(160, 80, 16, 48));
-	arm2.setTextureRect(IntRect(192, 80, 16, 48));
-	leg1.setTextureRect(IntRect(0, 80, 16, 48));
-	leg2.setTextureRect(IntRect(32, 80, 16, 48));
+	head.setTextureRect(IntRect(0 / 2, 32 / 2, 32 / 2, 32 / 2));
+	body.setTextureRect(IntRect(64 / 2, 80 / 2, 16 / 2, 48 / 2));
+	arm1.setTextureRect(IntRect(160 / 2, 80 / 2, 16 / 2, 48 / 2));
+	arm2.setTextureRect(IntRect(192 / 2, 80 / 2, 16 / 2, 48 / 2));
+	leg1.setTextureRect(IntRect(0 / 2, 80 / 2, 16 / 2, 48 / 2));
+	leg2.setTextureRect(IntRect(32 / 2, 80 / 2, 16 / 2, 48 / 2));
 
 	head.setPosition(x, y);
-	body.setPosition(x + 8, y + 32);
-	arm2.setPosition(x + 8, y + 32);
-	arm1.setPosition(x + 24, y + 32);
-	leg2.setPosition(x + 8, y + 32 + 48);
-	leg1.setPosition(x + 24, y + 32 + 48);
+	body.setPosition(x + 8 / 2, y + 32 / 2);
+	arm2.setPosition(x + 8 / 2, y + 32 / 2);
+	arm1.setPosition(x + 24 / 2, y + 32 / 2);
+	leg2.setPosition(x + 8 / 2, y + 32 / 2 + 48 / 2);
+	leg1.setPosition(x + 24 / 2, y + 32 / 2 + 48 / 2);
 }
 
 void Player::renderBack()
 {
-	head.setTextureRect(IntRect(96, 32, 32, 32));
-	body.setTextureRect(IntRect(128, 80, 32, 48));
-	arm2.setTextureRect(IntRect(160, 80, 16, 48));
-	arm1.setTextureRect(IntRect(192, 80, 16, 48));
-	leg2.setTextureRect(IntRect(0, 80, 16, 48));
-	leg1.setTextureRect(IntRect(32, 80, 16, 48));
+	head.setTextureRect(IntRect(96 / 2, 32 / 2, 32 / 2, 32 / 2));
+	body.setTextureRect(IntRect(128 / 2, 80 / 2, 32 / 2, 48 / 2));
+	arm2.setTextureRect(IntRect(160 / 2, 80 / 2, 16 / 2, 48 / 2));
+	arm1.setTextureRect(IntRect(192 / 2, 80 / 2, 16 / 2, 48 / 2));
+	leg2.setTextureRect(IntRect(0 / 2, 80 / 2, 16 / 2, 48 / 2));
+	leg1.setTextureRect(IntRect(32 / 2, 80 / 2, 16 / 2, 48 / 2));
 
 	head.setPosition(x, y);
-	body.setPosition(x, y + 32);
-	arm1.setPosition(x, y + 32);
-	arm2.setPosition(x + 32, y + 32);
-	leg1.setPosition(x + 16, y + 32 + 48);
-	leg2.setPosition(x + 16, y + 32 + 48);
+	body.setPosition(x, y + 32 / 2);
+	arm1.setPosition(x, y + 32 / 2);
+	arm2.setPosition(x + 32 / 2, y + 32 / 2);
+	leg1.setPosition(x + 16 / 2, y + 32 / 2 + 48 / 2);
+	leg2.setPosition(x + 16 / 2, y + 32 / 2 + 48 / 2);
 }
 
 void Player::animateJump()
@@ -292,10 +292,10 @@ void Player::animateRight()
 
 void Player::animateSit()
 {
-	head.setTextureRect(IntRect(32, 0, 32, 32));
+	head.setTextureRect(IntRect(32 / 2, 0, 32 / 2, 32 / 2));
 	
-	head.setPosition(x, y + 2);
-	body.setPosition(x, y + 34);
+	head.setPosition(x, y + 2 / 2);
+	body.setPosition(x, y + 3 / 24);
 
 	r += 1;
 	if (r > 10)
@@ -314,9 +314,9 @@ void Player::animate()
 
 void Player::default()
 {
-	arm1.setOrigin(16, 0);
+	arm1.setOrigin(16 / 2, 0);
 	arm2.setOrigin(0, 0);
-	leg1.setOrigin(16, 0);
+	leg1.setOrigin(16 / 2, 0);
 	leg2.setOrigin(0, 0);
 
 	arm1.setRotation(0);
