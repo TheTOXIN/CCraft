@@ -1,0 +1,173 @@
+﻿  Audio.cpp
+  Block.cpp
+  Camera.cpp
+D:\DEVELOPER\CCraft\CCraft\Camera.cpp(13,38): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+D:\DEVELOPER\CCraft\CCraft\Camera.cpp(13,35): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+D:\DEVELOPER\CCraft\CCraft\Camera.cpp(31,44): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Camera.cpp(31,28): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Camera.cpp(36,38): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+D:\DEVELOPER\CCraft\CCraft\Camera.cpp(36,35): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+D:\DEVELOPER\CCraft\CCraft\Camera.cpp(63,23): warning C4305: аргумент: усечение из "double" в "float"
+D:\DEVELOPER\CCraft\CCraft\Camera.cpp(68,23): warning C4305: аргумент: усечение из "double" в "float"
+  Level.cpp
+  Control.cpp
+D:\DEVELOPER\CCraft\CCraft\Control.cpp(107,8): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+D:\DEVELOPER\CCraft\CCraft\Control.cpp(108,8): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+  Game.cpp
+  Graphic.cpp
+D:\DEVELOPER\CCraft\CCraft\Graphic.cpp(20,32): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Graphic.cpp(20,24): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Graphic.cpp(38,79): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Graphic.cpp(38,51): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Graphic.cpp(84,27): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+D:\DEVELOPER\CCraft\CCraft\Graphic.cpp(84,24): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+D:\DEVELOPER\CCraft\CCraft\Graphic.cpp(88,32): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  Item.cpp
+  Main.cpp
+D:\DEVELOPER\CCraft\CCraft\Main.cpp(9,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Memory.cpp
+  Object.cpp
+  Player.cpp
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(24,26): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(24,21): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(34,8): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(55,16): warning C4244: =: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(56,13): warning C4244: =: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(155,11): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(156,11): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(174,11): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(175,11): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(207,22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(207,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(208,24): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(208,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(209,24): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(209,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(210,33): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(210,21): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(211,42): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(211,21): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(212,42): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(212,21): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(224,22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(224,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(225,32): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(225,21): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(226,33): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(226,21): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(227,32): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(227,21): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(228,42): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(228,21): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(229,41): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(229,21): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(241,22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(241,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(242,32): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(242,21): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(243,32): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(243,21): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(244,33): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(244,21): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(245,41): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(245,21): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(246,42): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(246,21): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(258,22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(258,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(259,24): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(259,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(260,24): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(260,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(261,33): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(261,21): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(262,42): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(262,21): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(263,42): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(263,21): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(269,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(270,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(271,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(272,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(278,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(279,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(280,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(281,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(287,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(288,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(289,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(290,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(297,24): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(297,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(298,24): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(298,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(304,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\DEVELOPER\CCraft\CCraft\Player.cpp(305,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  Chunck.cpp
+  World.cpp
+  Создание кода...
+LINK : fatal error LNK1104: не удается открыть файл "sfml-graphics-d.lib"

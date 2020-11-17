@@ -294,9 +294,6 @@ void Player::animateSit()
 {
 	head.setTextureRect(IntRect(32 / 2, 0, 32 / 2, 32 / 2));
 	
-	head.setPosition(x, y + 2 / 2);
-	body.setPosition(x, y + 3 / 24);
-
 	r += 1;
 	if (r > 10)
 		r = 10;
