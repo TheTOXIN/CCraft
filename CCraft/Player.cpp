@@ -37,7 +37,7 @@ bool Player::validClick(int cx, int cy)
 
 void Player::spawn()
 {
-	while (checkY()) {
+	while (checkY(false)) {
 		this->y--;
 		rect.top--;
 	}
@@ -54,12 +54,12 @@ void Player::update()
 	
 	rect.left = x - 8;
 	rect.top = y;
-
-	if (checkX()) x -= dx;
-
+	
+	bool isX = checkX();
+	if (isX) x -= dx;
 	onGround = false;
 
-	if (checkY())
+	if (checkY(isX))
 	{
 		onGround = true;
 		dy = 0;
@@ -160,14 +160,14 @@ bool Player::checkX()
 	int i3 = (tmpY + 48) / Block::size;
 
 	int j1 = (tmpX + 8) / Block::size;
-	int j2 = (tmpX + 24) / Block::size;
+	int j2 = (tmpX + 24 - 1) / Block::size;
 	
 	return level->blocks[i1][j1].isSolid || level->blocks[i2][j1].isSolid || level->blocks[i3][j1].isSolid
 		    ||
 		    level->blocks[i1][j2].isSolid || level->blocks[i2][j2].isSolid || level->blocks[i3][j2].isSolid;
 }
 
-bool Player::checkY()
+bool Player::checkY(bool blya)
 {
 	//WARING FUCKING MAGIC
 
@@ -178,7 +178,12 @@ bool Player::checkY()
 	int j1 = (tmpX + 8) / Block::size;
 	int j2 = (tmpX + 24) / Block::size;
 
-	return level->blocks[i][j1].isSolid || level->blocks[i][j2].isSolid;
+	bool b1 = level->blocks[i][j1].isSolid;
+	bool b2 = level->blocks[i][j2].isSolid;
+
+	if (blya) return (!b1 || b2) && (!b2 || b1);
+	
+	return b1 || b2;
 }
 
 void Player::init()

@@ -83,5 +83,5 @@ public:
 	void movePrev();
 
 	bool checkX();
-	bool checkY();
+	bool checkY(bool blya);
 };
