@@ -26,6 +26,8 @@ void Control::checkControl(RenderWindow & window)
 		}
 		if (event.type == Event::MouseButtonReleased)
 			this->hasClick = false;
+		if (event.type == Event::MouseWheelScrolled)
+			player->c_block += event.mouseWheelScroll.delta;
 	}
 
 	controlKeyboardPlayer(window);
@@ -110,7 +112,7 @@ void Control::controlClickPlayer(RenderWindow & window)
 	if (Mouse::isButtonPressed(Mouse::Right) && !hasClick)
 	{
 		if (!player->validClick(x, y)) return;
-		chunck->createBlock(x, y);
+		chunck->createBlock(x, y, player->c_block);
 		this->hasClick = true;
 	}
 

@@ -49,7 +49,7 @@ Level* Chunck::generate(int number, int index, int lvl)
 	return &levels[lvl][number];
 }
 
-void Chunck::createBlock(int x, int y)
+void Chunck::createBlock(int x, int y, int index)
 {
 	Level *currentLevel = &levels[y / Game::h][x / Game::w];
 
@@ -65,7 +65,7 @@ void Chunck::createBlock(int x, int y)
 		if (tmpX >= 0 && setY >= 0 && tmpX < currentLevel->w && setY < currentLevel->h) {
 			if (currentLevel->blocks[tmpY][tmpX].index != Block::NONE) {
 				if (currentLevel->blocks[setY][setX].index == Block::NONE) {
-					currentLevel->blocks[setY][setX] = Block::BOARD;
+					currentLevel->blocks[setY][setX] = index;
 					break;
 				}
 			}

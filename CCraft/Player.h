@@ -31,6 +31,7 @@ public:
 	int j;
 	
 	int r_area;
+	int c_block;
 
 	bool inSpace;
 	bool onGround;

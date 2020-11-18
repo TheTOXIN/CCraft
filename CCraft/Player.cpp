@@ -19,6 +19,7 @@ Player::Player(Chunck & chunck)
 	this->r = 0;
 	this->j = 0;
 	this->r_area = 4;
+	this->c_block = 5;
 
 	onGround = false;
 	rect = FloatRect(x - 8, y, 32, 64);
@@ -160,7 +161,7 @@ bool Player::checkX()
 	int i3 = (tmpY + 48) / Block::size;
 
 	int j1 = (tmpX + 8) / Block::size;
-	int j2 = (tmpX + 24 - 1) / Block::size;
+	int j2 = (tmpX + 24) / Block::size;
 	
 	return level->blocks[i1][j1].isSolid || level->blocks[i2][j1].isSolid || level->blocks[i3][j1].isSolid
 		    ||

@@ -20,7 +20,7 @@ public:
 
 	Memory *memory;
 
-	void createBlock(int x, int y);
+	void createBlock(int x, int y, int index);
 	void destroyBlock(int x, int y);
 
 	Level* generate(int n, int i, int l);
