@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-	srand(time(NULL));
+	srand(54426938);
 
 	Game game;
 	game.start();
