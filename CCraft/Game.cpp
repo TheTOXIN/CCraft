@@ -16,33 +16,37 @@ void Game::start()
 	window.setMouseCursorVisible(false);
 
 	Memory memory;
+	
 	Chunck chunck(memory);
 	Player player(chunck);
 	World world(player, chunck, memory);
+
 	Camera camera(player, h / 2, w / 2);
 	Control control(camera, player, chunck, world);
-	Graphic graphic(chunck, player, w, h);//only world
+	Graphic graphic(chunck, player, w, h);
+
 	Clock clock;
+	Time timer = Time::Zero;
+	Time fps = seconds(1.f / 60.f);
 
 	while (window.isOpen())
 	{
-		tick += clock.getElapsedTime().asMicroseconds();
-		clock.restart();
+		control.checkControl(window);
 
-		if (tick > temp)
+		while (timer > fps)
 		{
-			control.checkControl(window);
+			timer -= fps;
 
 			player.update();
 			world.update();
 			camera.update();
-
-			tick = 0;
 		}
 
 		window.setView(camera.getView());
  		window.clear();
 		graphic.draw(window);
 		window.display();
+
+		timer += clock.restart();
 	}
 }

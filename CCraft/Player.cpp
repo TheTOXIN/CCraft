@@ -46,7 +46,7 @@ void Player::spawn()
 
 void Player::update()
 {
-	if (!onGround) dy = 2;
+	if (!onGround) dy = 3;
 
 	move();
 
@@ -97,7 +97,7 @@ void Player::move()
 void Player::none()
 {
 	r = 0;
-	d = 1;
+	d = 3;
 	dx = 0;
 	renderFront();
 }
@@ -114,7 +114,7 @@ void Player::jump()
 	animateJump();
 
 	j++;
-	if (j < 24)
+	if (j < 16)
 		dy = -3;
 	else
 		return;
@@ -127,7 +127,7 @@ void Player::left()
 	renderLeft();
 	animateLeft();
 	
-	dx = -1;
+	dx = -3;
 }
 
 void Player::right()
@@ -135,7 +135,7 @@ void Player::right()
 	renderRight();
 	animateRight();
 	
-	dx = 1;
+	dx = 3;
 }
 
 void Player::down()
