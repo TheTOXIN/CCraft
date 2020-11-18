@@ -85,4 +85,5 @@ public:
 
 	bool checkX();
 	bool checkY(bool blya);
+	bool checkJump();
 };

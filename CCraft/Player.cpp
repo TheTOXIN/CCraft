@@ -38,7 +38,8 @@ bool Player::validClick(int cx, int cy)
 
 void Player::spawn()
 {
-	while (checkY(false)) {
+	while (checkY(false)) 
+	{
 		this->y--;
 		rect.top--;
 	}
@@ -104,6 +105,8 @@ void Player::none()
 
 void Player::jump()
 {
+	if (checkJump()) return;
+
 	if (dx > 0)
 		renderRight();
 	else if (dx < 0)
@@ -114,9 +117,9 @@ void Player::jump()
 	animateJump();
 
 	j++;
-	if (j < 16)
-		dy = -3;
-	else
+	if (j < 16) 
+		 dy = -3;
+	else 
 		return;
 
 	onGround = false;
@@ -185,6 +188,19 @@ bool Player::checkY(bool blya)
 	if (blya) return (!b1 || b2) && (!b2 || b1);
 	
 	return b1 || b2;
+}
+
+bool Player::checkJump() 
+{
+	//WARING FUCKING MAGIC
+
+	int tmpX = rect.left - Game::w * level->x;
+	int tmpY = rect.top - Game::h * level->y;
+
+	int i = (tmpY - 0) / Block::size;
+	int j = (tmpX + 16) / Block::size;
+
+	return level->blocks[i][j].isSolid;
 }
 
 void Player::init()
